@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {
     Link
 } from 'react-router-dom'
@@ -33,9 +33,24 @@ function Cart(props) {
         })
     }
 
+    const node = useRef()
+
+    useEffect(() => {
+        let handler = (event) => {
+            if (!node.current.contains(event.target) && event.target.id !== "shopping_bag_img" && event.target.id !== "cart_amount") {
+                props.handleClickOutsideCart()
+            }
+        }
+        document.addEventListener('mousedown', handler)
+
+        return () => {
+            document.removeEventListener('mousedown', handler)
+        }
+    });
+
     return (
-        <div className={props.cartOpen ?"cart_container active" : "cart_container"}>
-            <img src={x_mark} id="close_cart" alt="" onClick={props.handleCartOpen}/>
+        <div ref={node} className={props.cartOpen ?"cart_container active" : "cart_container"}>
+            <img src={x_mark} id="close_cart" alt="" onClick={() => props.handleCartOpen("x_mark")}/>
             {props.orders.length > 0 ? 
             <div style={{width: "100%", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", height:"100%"}}>
             <h1 id="your_cart">Your Bag ({props.cartItems} Items)</h1>

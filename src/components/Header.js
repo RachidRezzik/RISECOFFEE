@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {
     Link
 } from 'react-router-dom'
@@ -14,18 +14,23 @@ function Header(props) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(useCurrentWidth() <= 750 ? true : false)
     const [navBlack, setNavBlack] = useState(false)
+    const width = useCurrentWidth()
 
     useEffect(() => {
         if (window.location.href.includes("Checkout")){
             setNavBlack(true)
         }
+        if (window.scrollY <= 65 && props.cartOpen == false && menuOpen === false && width < 750){
+            setNavBlack(false)
+        }
     })
 
+
     const handleSetNavBlack = () =>{
-        if (window.scrollY > 65){
-        setNavBlack(true)
-        } else if (window.scrollY <= 65 && !window.location.href.includes("Checkout")){
+        if (window.scrollY <= 65 && !window.location.href.includes("Checkout") && menuOpen === false && props.cartOpen === false){
             setNavBlack(false)
+        } else{
+            setNavBlack(true)
         }
 
     }
@@ -80,13 +85,26 @@ function Header(props) {
         setMenuOpen(false)
     }
 
-    
+    const node2 = useRef()
+
+    useEffect(() => {
+        let handler = (event) => {
+            if (!node2.current.contains(event.target) && event.target.id !== "hamburger_icon" && width < 750) {
+                setMenuOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handler)
+
+        return () => {
+            document.removeEventListener('mousedown', handler)
+        }
+    });
 
     return (
         <div>
             <div className={navBlack ? "navbar active" : "navbar"}>
                 <div className="hamburger">
-                    <img src={menuOpen ? x_mark : hamburger} alt="" onClick={handleMenuOpen}/>
+                    <img id="hamburger_icon" src={menuOpen ? x_mark : hamburger} alt="" onClick={handleMenuOpen}/>
                 </div>
                 <div className="coffee_logo">
                     <Link to="/" onClick={handleMenuOpen2}>
@@ -94,10 +112,10 @@ function Header(props) {
                     </Link>
                 </div>
                 <div className="shopping">
-                    <img onClick={handleCartOpen2} src={shopping_bag} alt="" />
-                    <h4 onClick={props.handleCartOpen}id="cart_amount">{props.cartItems}</h4>
+                    <img id="shopping_bag_img" onClick={handleCartOpen2} src={shopping_bag} alt="" />
+                    <h4 onClick={handleCartOpen2}id="cart_amount">{props.cartItems}</h4>
                 </div>
-                <div className={menuOpen ? "menu_container_active" : "menu_container"}>
+                <div ref={node2} className={menuOpen ? "menu_container_active" : "menu_container"}>
                     <ul className={menuOpen ? "site_navigation active" : "site_navigation"}>
                         <li>
                             <Link className="nav_link" to="/" onClick={handleMenuOpen2}>Home</Link>

@@ -75,9 +75,9 @@ function Checkout(props) {
                             <input ref={register({ required: true })} name="email" type="email" placeholder="Email" />
                             {errors.email && <p className="error">Required</p>}
                         </div>
-                        <div className="input_error" style={{width: "48%", display:"block", height: "57.5px",flexWrap: "wrap",overflow: "hidden"}}>
+                        <div className="input_error" style={{width: "48%", display:"block", height: "60px",flexWrap: "wrap",overflow: "hidden"}}>
                             <input ref={register({ required: true})} name="phone" type="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
-                            <p style={{textAlign:"left", fontSize: "10px", marginTop:"2.5px"}}>XXX-XXX-XXXX</p>
+                            <p style={{textAlign:"left", fontSize: "8.5px"}}>XXX-XXX-XXXX</p>
                             {errors.phone && errors.phone.type == "required" &&<p className="error">Required</p>}
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './App.css';
 import {
   HashRouter,
@@ -19,6 +19,7 @@ function App() {
   const [cartItems, setCartItems] = useState(0)
   const [cartOrders, setCartOrders] = useState([])
   const [cartOpen, setCartOpen] = useState(false)
+
   
   const newItemInOrder = (item_quantity, item_title) =>{
     let order_object = {}
@@ -100,6 +101,11 @@ function App() {
     setCartItems(0)
   }
 
+  const handleClickOutsideCart = () => {
+    setCartOpen(false)
+  }
+
+  
 
   return (
     <div className="App">
@@ -111,12 +117,13 @@ function App() {
         handleCartOpen={handleCartOpen}   
         handleRemoveFromBag={handleRemoveFromBag} 
         handleAddQuantity={handleAddQuantity}
-        handleSubtractQuantity={handleSubtractQuantity}  
+        handleSubtractQuantity={handleSubtractQuantity} 
+        handleClickOutsideCart={handleClickOutsideCart} 
         />
         <Header 
         cartItems={cartItems}
+        cartOpen={cartOpen}
         handleCartOpen={handleCartOpen}
-        cartOpen={cartOpen}  
         />
         <Switch>
           <Route exact path="/" component={Home} />

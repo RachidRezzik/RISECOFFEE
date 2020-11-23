@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useState} from 'react'
 import './App.css';
 import {
   HashRouter,
@@ -24,19 +24,19 @@ function App() {
     return JSON.parse(localStorage.getItem('cartOrders'))
   }
 
-  if (localStorage.getItem('cartOrders') == undefined){
+  if (localStorage.getItem('cartOrders') === undefined){
     setOrderStorage([])
   }
-  const [cartOrders, setCartOrders] = useState(readOrderStorage() != [] ? readOrderStorage() : [] )
+  const [cartOrders, setCartOrders] = useState(readOrderStorage() !== [] ? readOrderStorage() : [] )
 
 
   //Setting Local Storage for Cart Items
-  if (localStorage.getItem('cartItems') == undefined){
+  if (localStorage.getItem('cartItems') === undefined){
     localStorage.setItem('cartItems', 0)
   }
   const cartItemsStorage = localStorage.getItem('cartItems')
 
-  const [cartItems, setCartItems] = useState(cartItemsStorage == 0 ? 0 : Number(cartItemsStorage))
+  const [cartItems, setCartItems] = useState(cartItemsStorage === 0 ? 0 : Number(cartItemsStorage))
 
   //State to Manage Opening/Closing of Cart Menu
   const [cartOpen, setCartOpen] = useState(false)
@@ -51,6 +51,7 @@ function App() {
     } else {
       order_object.subtotal = 7.99 * Number(item_quantity)
     }
+    order_object.key = cartOrders.length + 1
     setCartOrders(cartOrders.concat(order_object))
     setOrderStorage(cartOrders.concat(order_object))
   }
@@ -59,7 +60,7 @@ function App() {
     let items = Number(item_quantity)
     setCartItems(cartItems + items)
     localStorage.setItem('cartItems', (cartItems + items))
-    if (cartOrders.length == 0){
+    if (cartOrders.length === 0){
       newItemInOrder(item_quantity, item_title)
     } else {
       let types_in_bag = []
@@ -67,7 +68,7 @@ function App() {
         types_in_bag.push(order.item_title)
       })
       cartOrders.forEach(order => {
-        if (types_in_bag.includes(item_title) && item_title == order.item_title){
+        if (types_in_bag.includes(item_title) && item_title === order.item_title){
           order.item_quantity += Number(item_quantity)
           if (item_title !== "Texas Pecan"){
             order.subtotal += 9.99 * Number(item_quantity)
@@ -76,7 +77,7 @@ function App() {
           }
           setCartOrders(cartOrders)
           setOrderStorage(cartOrders)
-        } else if (types_in_bag.includes(item_title) == false){
+        } else if (types_in_bag.includes(item_title) === false){
           newItemInOrder(item_quantity, item_title)
         } 
       })

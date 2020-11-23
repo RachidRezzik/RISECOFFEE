@@ -8,7 +8,6 @@ import minus_sign from '../images/minus_sign.png'
 import plus_sign from '../images/plus_sign.png'
 
 function Cart(props) {
-    console.log(props.orders)
     let order_total = 0
     if (props.orders.length !== 0) {
         order_total = props.orders.reduce((total, order) => total + order.subtotal, 0).toFixed(2) 
@@ -58,7 +57,7 @@ function Cart(props) {
             <div className="cart_items_container">
             {props.orders.map(order => {
                 return (
-                    <div className="cart_item">
+                    <div key={order.key}className="cart_item">
                         <div style={{textAlign:"right"}}>
                             <img className="remove_item" src={x_mark} alt="" onClick={() => handleRemove(order.item_title, order.item_quantity)} />
                         </div>

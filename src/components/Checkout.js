@@ -36,7 +36,7 @@ function Checkout(props) {
                     <h1 style={{marginBottom: "15px"}}>Order Summary</h1>
                     {props.orders.map(order => {
                         return (
-                            <div className="checkout_item">
+                            <div key={order.key} className="checkout_item">
                                 <p>{order.item_title}({order.item_quantity})</p>
                                 <p>${order.subtotal}</p>
                             </div>
@@ -78,7 +78,7 @@ function Checkout(props) {
                         <div className="input_error" style={{width: "48%", display:"block", height: "60px",flexWrap: "wrap",overflow: "hidden"}}>
                             <input ref={register({ required: true})} name="phone" type="phone" placeholder="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
                             <p style={{textAlign:"left", fontSize: "8.5px"}}>XXX-XXX-XXXX</p>
-                            {errors.phone && errors.phone.type == "required" &&<p className="error">Required</p>}
+                            {errors.phone && errors.phone.type === "required" &&<p className="error">Required</p>}
                         </div>
                     </div>
                     <h4>Address:</h4>
@@ -93,7 +93,7 @@ function Checkout(props) {
                         <div className="input_error" style={{width: "22.5%", 
                         display:"block", height: "50px",flexWrap: "wrap",overflow: "hidden"}}>
                             <select name="state" id="state" placeholder="State" ref={register({ required: true})}>
-                                <option disabled  selected value="" >State</option>
+                                <option  value="" >State</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -154,10 +154,10 @@ function Checkout(props) {
                         </div>
                         <div className="input_error" style={InputStyle}>
                             <input ref={register({ required: true, minLength: 5, maxLength: 5, validate: zipIsNumber})} name="ZIP" type="text" placeholder="ZIP" />
-                            {errors.ZIP && errors.ZIP.type == "required" && <p className="error">Required</p>}
-                            {errors.ZIP && errors.ZIP.type == "minLength" && <p className="error">Invalid ZIP</p>}
-                            {errors.ZIP && errors.ZIP.type == "maxLength" && <p className="error">Invalid ZIP</p>}
-                            {errors.ZIP && errors.ZIP.type == "validate" && <p className="error">ZIP Must be Numerical</p>}
+                            {errors.ZIP && errors.ZIP.type === "required" && <p className="error">Required</p>}
+                            {errors.ZIP && errors.ZIP.type === "minLength" && <p className="error">Invalid ZIP</p>}
+                            {errors.ZIP && errors.ZIP.type === "maxLength" && <p className="error">Invalid ZIP</p>}
+                            {errors.ZIP && errors.ZIP.type === "validate" && <p className="error">ZIP Must be Numerical</p>}
                         </div>
                     </div>
                     <input id="payment" type="submit" value="Continue to Payment" />

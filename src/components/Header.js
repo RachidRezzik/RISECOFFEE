@@ -22,7 +22,7 @@ function Header(props) {
         } else if (window.scrollY <= 65 && props.cartOpen == false && menuOpen === false && width < 750){
             setNavBlack(false)
         }
-    })
+    }, [props.cartOpen, menuOpen, width])
 
 
     const handleSetNavBlack = () =>{

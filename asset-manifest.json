@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/RISECOFFEE/static/css/main.04419de6.chunk.css",
-    "main.js": "/RISECOFFEE/static/js/main.52dc1202.chunk.js",
-    "main.js.map": "/RISECOFFEE/static/js/main.52dc1202.chunk.js.map",
+    "main.css": "/RISECOFFEE/static/css/main.1fd21bb3.chunk.css",
+    "main.js": "/RISECOFFEE/static/js/main.b1559d27.chunk.js",
+    "main.js.map": "/RISECOFFEE/static/js/main.b1559d27.chunk.js.map",
     "runtime-main.js": "/RISECOFFEE/static/js/runtime-main.841e5032.js",
     "runtime-main.js.map": "/RISECOFFEE/static/js/runtime-main.841e5032.js.map",
     "static/js/2.72433603.chunk.js": "/RISECOFFEE/static/js/2.72433603.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ef844014.chunk.js": "/RISECOFFEE/static/js/3.ef844014.chunk.js",
     "static/js/3.ef844014.chunk.js.map": "/RISECOFFEE/static/js/3.ef844014.chunk.js.map",
     "index.html": "/RISECOFFEE/index.html",
-    "static/css/main.04419de6.chunk.css.map": "/RISECOFFEE/static/css/main.04419de6.chunk.css.map",
+    "static/css/main.1fd21bb3.chunk.css.map": "/RISECOFFEE/static/css/main.1fd21bb3.chunk.css.map",
     "static/js/2.72433603.chunk.js.LICENSE.txt": "/RISECOFFEE/static/js/2.72433603.chunk.js.LICENSE.txt",
     "static/media/Rise_Brother1.c1ef5691.jpg": "/RISECOFFEE/static/media/Rise_Brother1.c1ef5691.jpg",
     "static/media/Rise_Brother2.5185f939.jpg": "/RISECOFFEE/static/media/Rise_Brother2.5185f939.jpg",
@@ -32,7 +32,7 @@
   "entrypoints": [
     "static/js/runtime-main.841e5032.js",
     "static/js/2.72433603.chunk.js",
-    "static/css/main.04419de6.chunk.css",
-    "static/js/main.52dc1202.chunk.js"
+    "static/css/main.1fd21bb3.chunk.css",
+    "static/js/main.b1559d27.chunk.js"
   ]
 }

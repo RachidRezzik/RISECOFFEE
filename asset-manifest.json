@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/RISECOFFEE/static/css/main.e23e8b87.chunk.css",
-    "main.js": "/RISECOFFEE/static/js/main.4c9f76cf.chunk.js",
-    "main.js.map": "/RISECOFFEE/static/js/main.4c9f76cf.chunk.js.map",
-    "runtime-main.js": "/RISECOFFEE/static/js/runtime-main.841e5032.js",
-    "runtime-main.js.map": "/RISECOFFEE/static/js/runtime-main.841e5032.js.map",
-    "static/js/2.72433603.chunk.js": "/RISECOFFEE/static/js/2.72433603.chunk.js",
-    "static/js/2.72433603.chunk.js.map": "/RISECOFFEE/static/js/2.72433603.chunk.js.map",
-    "static/js/3.ef844014.chunk.js": "/RISECOFFEE/static/js/3.ef844014.chunk.js",
-    "static/js/3.ef844014.chunk.js.map": "/RISECOFFEE/static/js/3.ef844014.chunk.js.map",
+    "main.js": "/RISECOFFEE/static/js/main.621bb2d5.chunk.js",
+    "main.js.map": "/RISECOFFEE/static/js/main.621bb2d5.chunk.js.map",
+    "runtime-main.js": "/RISECOFFEE/static/js/runtime-main.90b2f6f0.js",
+    "runtime-main.js.map": "/RISECOFFEE/static/js/runtime-main.90b2f6f0.js.map",
+    "static/js/2.053afcd2.chunk.js": "/RISECOFFEE/static/js/2.053afcd2.chunk.js",
+    "static/js/2.053afcd2.chunk.js.map": "/RISECOFFEE/static/js/2.053afcd2.chunk.js.map",
+    "static/js/3.53e7c1e4.chunk.js": "/RISECOFFEE/static/js/3.53e7c1e4.chunk.js",
+    "static/js/3.53e7c1e4.chunk.js.map": "/RISECOFFEE/static/js/3.53e7c1e4.chunk.js.map",
     "index.html": "/RISECOFFEE/index.html",
     "static/css/main.e23e8b87.chunk.css.map": "/RISECOFFEE/static/css/main.e23e8b87.chunk.css.map",
-    "static/js/2.72433603.chunk.js.LICENSE.txt": "/RISECOFFEE/static/js/2.72433603.chunk.js.LICENSE.txt",
+    "static/js/2.053afcd2.chunk.js.LICENSE.txt": "/RISECOFFEE/static/js/2.053afcd2.chunk.js.LICENSE.txt",
     "static/media/Rise_Brother1.c1ef5691.jpg": "/RISECOFFEE/static/media/Rise_Brother1.c1ef5691.jpg",
     "static/media/Rise_Brother2.5185f939.jpg": "/RISECOFFEE/static/media/Rise_Brother2.5185f939.jpg",
     "static/media/App.css": "/RISECOFFEE/static/media/shop_background.78643be8.jpg",
@@ -29,9 +29,9 @@
     "static/media/x_mark.24f16f08.png": "/RISECOFFEE/static/media/x_mark.24f16f08.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.841e5032.js",
-    "static/js/2.72433603.chunk.js",
+    "static/js/runtime-main.90b2f6f0.js",
+    "static/js/2.053afcd2.chunk.js",
     "static/css/main.e23e8b87.chunk.css",
-    "static/js/main.4c9f76cf.chunk.js"
+    "static/js/main.621bb2d5.chunk.js"
   ]
 }

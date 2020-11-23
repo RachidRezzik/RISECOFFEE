@@ -2,16 +2,19 @@ import React from 'react'
 import {
     Link
 } from 'react-router-dom'
+import {isBrowser} from "react-device-detect"
 //Images
 import down_arrow from '../images/dropdown_arrow.png'
 import fire from '../images/fire.jpg'
 
 export default function Home() {
     const handleScrollArrow = () => {
-        window.scroll({
-            top: window.innerHeight - 65, 
-            behavior: 'smooth'
-        });
+        if (isBrowser){
+            window.scroll({
+                top: window.innerHeight - 65, 
+                behavior: 'smooth'
+            });
+        }
     }
 
     const handleHomeLinks = () => {

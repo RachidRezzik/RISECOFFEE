@@ -27,7 +27,7 @@ function App() {
   if (localStorage.getItem('cartOrders') === undefined){
     setOrderStorage([])
   }
-  const [cartOrders, setCartOrders] = useState(readOrderStorage() !== [] ? readOrderStorage() : [] )
+  const [cartOrders, setCartOrders] = useState(readOrderStorage() != null ? readOrderStorage() : [] )
 
 
   //Setting Local Storage for Cart Items

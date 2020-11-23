@@ -7,7 +7,7 @@ function ItemAdded(props) {
     
     useEffect(() =>
     {
-        if (props.show != 0){
+        if (props.show !== 0){
             setIsVisible(true)
             setTimer(props.delay);
         }
@@ -19,7 +19,7 @@ function ItemAdded(props) {
     };
 
     return (
-        <div><h3 className={isVisible ? "item_added_alert active" : "item_added_alert"}>Item Added to Cart ✔</h3></div>
+        <div><h3 className={isVisible ? "item_added_alert active" : "item_added_alert"}>Item Added to Bag</h3></div>
     );
 };
 

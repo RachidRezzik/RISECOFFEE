@@ -22,8 +22,8 @@ export default function About() {
                         <h3>Brandon Rise</h3>
                     </div>
                 </div>
-                <p>Rise Coffee was founded by the Rise brothers in 2018. The brothers shared an entreprenurial passion that was often fueled by coffee. With coffee being apart of their everyday pursuits, the brothers often discussed which coffees they thought were better and why. These discussions became more passionate/enjoyable then they thought they'd ever be. </p>
-                <p>The Rise brothers decided to put their money where their mouthes were by creating their own fresh organic coffee. With four locations across Texas and our online store, we invite you to taste the passion put into our coffee!</p>
+                <p>Rise Coffee was founded by the Rise brothers in 2018. The brothers shared an entrepreneurial passion that was often fueled by coffee. With coffee being apart of their everyday pursuits, the brothers often discussed which coffees they thought were better and why. These discussions ended up being what each brother looked forward to each day. </p>
+                <p>After many colorful discussions, the Rise brothers decided to put their money where their mouthes were by creating their own fresh organic coffee. With four locations across Texas and our online store, we invite you to taste the passion put into our coffee!</p>
             </div>
         </div>
     )

@@ -4,13 +4,12 @@ import {
 } from 'react-router-dom'
 //Images
 import down_arrow from '../images/dropdown_arrow.png'
-import coffee_video from '../images/coffee_video.mp4'
 import fire from '../images/fire.jpg'
 
-export default function Home(props) {
+export default function Home() {
     const handleScrollArrow = () => {
         window.scroll({
-            top: window.innerHeight - 50, 
+            top: window.innerHeight - 65, 
             behavior: 'smooth'
         });
     }
@@ -25,7 +24,7 @@ export default function Home(props) {
         <div>
             <div className="home_welcome">
                 <h1>Rise to the Occassion</h1>
-                <Link to="/Coffee" onClick={handleHomeLinks}>Shop Rise Coffee</Link>
+                <Link to="/Coffee" onClick={handleHomeLinks}>Shop Coffee</Link>
                 <img src={down_arrow} onClick={handleScrollArrow} alt="" />
             </div>
             <div className="our_process">

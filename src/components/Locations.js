@@ -24,14 +24,14 @@ export default function Locations(props) {
                     <div className="location">
                         <h3>Houston</h3>
                         <img src={houston} alt="" />
-                        <h4>Address: 12672 Dallas St.</h4>
-                        <h4>Phone: 832-123-0009</h4>
+                        <h4>Address: 12772 Houston Avenue</h4>
+                        <h4>Phone: 832-567-3319</h4>
                     </div>
                     <div className="location">
                         <h3>Austin</h3>
                         <img src={austin} alt="" />
-                        <h4>Address: 12672 Dallas St.</h4>
-                        <h4>Phone: 210-123-0009</h4>
+                        <h4>Address: 19674 Austin Boulevard</h4>
+                        <h4>Phone: 512-723-8209</h4>
                     </div>
                 </div>
             </div>

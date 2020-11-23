@@ -16,8 +16,29 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 
 function App() {
-  const [cartItems, setCartItems] = useState(0)
-  const [cartOrders, setCartOrders] = useState([])
+  //Setting Local Storage for Cart Orders
+  const setOrderStorage = (cartOrders) => {
+    localStorage.setItem('cartOrders', JSON.stringify(cartOrders))
+  }
+  const readOrderStorage = () => {
+    return JSON.parse(localStorage.getItem('cartOrders'))
+  }
+
+  if (localStorage.getItem('cartOrders') == undefined){
+    setOrderStorage([])
+  }
+  const [cartOrders, setCartOrders] = useState(readOrderStorage() != [] ? readOrderStorage() : [] )
+
+
+  //Setting Local Storage for Cart Items
+  if (localStorage.getItem('cartItems') == undefined){
+    localStorage.setItem('cartItems', 0)
+  }
+  const cartItemsStorage = localStorage.getItem('cartItems')
+
+  const [cartItems, setCartItems] = useState(cartItemsStorage == 0 ? 0 : Number(cartItemsStorage))
+
+  //State to Manage Opening/Closing of Cart Menu
   const [cartOpen, setCartOpen] = useState(false)
 
   
@@ -31,11 +52,13 @@ function App() {
       order_object.subtotal = 7.99 * Number(item_quantity)
     }
     setCartOrders(cartOrders.concat(order_object))
+    setOrderStorage(cartOrders.concat(order_object))
   }
   
   const handleAddToBag = (item_quantity, item_title) => {
     let items = Number(item_quantity)
     setCartItems(cartItems + items)
+    localStorage.setItem('cartItems', (cartItems + items))
     if (cartOrders.length == 0){
       newItemInOrder(item_quantity, item_title)
     } else {
@@ -52,6 +75,7 @@ function App() {
             order.subtotal += 7.99 * Number(item_quantity)
           }
           setCartOrders(cartOrders)
+          setOrderStorage(cartOrders)
         } else if (types_in_bag.includes(item_title) == false){
           newItemInOrder(item_quantity, item_title)
         } 
@@ -63,7 +87,9 @@ function App() {
     let order_index = orders.findIndex(order => order.item_title === item_title)
     let new_orders = orders.filter((order, idx) => idx !== order_index)
     setCartOrders(new_orders)
+    setOrderStorage(new_orders)
     setCartItems(cartItems - item_quantity)
+    localStorage.setItem('cartItems', (cartItems - item_quantity))
   }
 
   const handleAddQuantity = (item_title, orders, item_quantity) => {
@@ -75,7 +101,9 @@ function App() {
     orders[order_index].item_quantity = item_quantity + 1
     orders[order_index].subtotal = item_price * (item_quantity + 1)
     setCartOrders(orders)
+    setOrderStorage(orders)
     setCartItems(cartItems + 1)
+    localStorage.setItem('cartItems', (cartItems + 1))
   }
 
   const handleSubtractQuantity = (item_title, orders, item_quantity) => {
@@ -88,8 +116,10 @@ function App() {
       orders[order_index].item_quantity = item_quantity - 1
       orders[order_index].subtotal = item_price * (item_quantity - 1)
       setCartItems(cartItems - 1)
+      localStorage.setItem('cartItems', (cartItems - 1))
     }
     setCartOrders(orders)
+    setOrderStorage(orders)
   }
 
   const handleCartOpen = () => {

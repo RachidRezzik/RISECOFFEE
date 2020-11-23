@@ -19,8 +19,7 @@ function Header(props) {
     useEffect(() => {
         if (window.location.href.includes("Checkout")){
             setNavBlack(true)
-        }
-        if (window.scrollY <= 65 && props.cartOpen == false && menuOpen === false && width < 750){
+        } else if (window.scrollY <= 65 && props.cartOpen == false && menuOpen === false && width < 750){
             setNavBlack(false)
         }
     })

@@ -8,6 +8,7 @@ import minus_sign from '../images/minus_sign.png'
 import plus_sign from '../images/plus_sign.png'
 
 function Cart(props) {
+    console.log(props.orders)
     let order_total = 0
     if (props.orders.length !== 0) {
         order_total = props.orders.reduce((total, order) => total + order.subtotal, 0).toFixed(2) 

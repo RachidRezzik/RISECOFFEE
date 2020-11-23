@@ -23,15 +23,10 @@ export default function Home(props) {
 
     return (
         <div>
-            <div className="video_wrapper">
-                <video id="coffee_video" autoPlay muted loop>
-                    <source src={coffee_video} type="video/mp4" />
-                </video>
-                <div className="home_welcome">
-                    <h1>Rise to the Occassion</h1>
-                    <Link to="/Coffee" onClick={handleHomeLinks}>Shop Rise Coffee</Link>
-                    <img src={down_arrow} onClick={handleScrollArrow} alt="" />
-                </div>
+            <div className="home_welcome">
+                <h1>Rise to the Occassion</h1>
+                <Link to="/Coffee" onClick={handleHomeLinks}>Shop Rise Coffee</Link>
+                <img src={down_arrow} onClick={handleScrollArrow} alt="" />
             </div>
             <div className="our_process">
                 <h4>Fire Roasted Coffee Beans</h4>

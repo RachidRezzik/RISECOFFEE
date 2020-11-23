@@ -224,8 +224,8 @@
   background: black;
   color: white;
   text-align: center;
-  padding: 20px 2.5%;
-  height: 160px;
+  padding: 60px 2.5%;
+  height: 225px;
 }
 
 .footer_div p{
@@ -238,6 +238,8 @@
   outline: none;
   border: none;
   height: 25px;
+  -webkit-appearance: none;
+  border-radius: 0px;
 }
 
 #enter_email{
@@ -266,53 +268,28 @@
 
 /* ************HOME******************* */
 
-.video_wrapper{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh);
-  /* margin-top: -45px; */
-  color: white;
-  z-index: -1;
-  background: red;
-}
-
-
 .home_welcome{
-  position: absolute;
-  object-fit: cover;
-  top: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh);
-  width: 100%;
-  color: white;
-  text-align: center;
-  border: 1px solid black;
-  padding: 0px 15px;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.67);
+    padding-top: 65px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(0, 0, 0, 0.596)), url(./images/home_background.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 20px black;
+    position: relative;
 }
 
-
-#coffee_video{
-  position: absolute;
-  object-fit: cover;
-  top: 0px;
-  height: calc(100vh);
-  width: 100%;
-  background: rgba(0, 0, 0, 0.844);
-  z-index: 1;
-}
 
 .home_welcome h1{
   font-size: 50px;
   text-shadow: 1px 1px 3px black;
   max-width: 800px;
-  margin-top: 65px;
+  margin-top: -65px;
 }
 
 .home_welcome a{
@@ -323,6 +300,7 @@
   text-decoration: none;
   font-size: 30px;
   margin-top: 25px;
+  text-shadow: none;
 }
 
 .home_welcome img{
@@ -332,6 +310,7 @@
   height: 30px;
   transition: all .25s ease;
   cursor: pointer;
+  z-index: 7;
 }
 
 .home_welcome img:hover{
@@ -651,6 +630,7 @@
 
 .locations_rise h1{
   font-size: 40px;
+  text-align: center;
 }
 
 .locations_rise img{
@@ -869,12 +849,12 @@
 
 .checkout_container{
   margin-top: 110px;
-  min-height: calc(100vh - 65px - 160px);
+  min-height: calc(100vh - 65px - 225px);
 }
 
 .checkout_container2{
   margin-top: 65px;
-  min-height: calc(100vh - 160px - 65px);
+  min-height: calc(100vh - 225px - 65px);
 }
 
 .checkout_container2 h2{
@@ -989,13 +969,6 @@
   text-align: left;
 }
 
-/* .shipping_container div input{
-  text-indent: 2.5px;
-  width: 49%;
-  margin-bottom: 10px;
-  font-size: 12.5px;
-} */
-
 #payment{
   text-align: center;
   margin: 50px auto;
@@ -1008,4 +981,5 @@
   color: goldenrod;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-appearance: none;
 }

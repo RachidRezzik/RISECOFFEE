@@ -132,8 +132,18 @@ function App() {
     setCartItems(0)
   }
 
+  //Navigation Bar Transparency, Click outside of cart menu..close menu
+
+  const [navBlack, setNavBlack] = useState(false)
+  const handleNavBlack = (condition) => {
+    setNavBlack(condition)
+  }
+
   const handleClickOutsideCart = () => {
     setCartOpen(false)
+    if (window.scrollY <= 65){
+      setNavBlack(false)
+    }
   }
 
   
@@ -154,6 +164,8 @@ function App() {
         <Header 
         cartItems={cartItems}
         cartOpen={cartOpen}
+        navBlack={navBlack}
+        handleNavBlack={handleNavBlack}
         handleCartOpen={handleCartOpen}
         />
         <Switch>

@@ -13,23 +13,23 @@ import useCurrentWidth from '../components/useCurrentWidth'
 function Header(props) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [isMobile, setIsMobile] = useState(useCurrentWidth() <= 750 ? true : false)
-    const [navBlack, setNavBlack] = useState(false)
+    // const [navBlack, setNavBlack] = useState(false)
     const width = useCurrentWidth()
 
     useEffect(() => {
         if (window.location.href.includes("Checkout")){
-            setNavBlack(true)
+            props.handleNavBlack(true)
         } else if (window.scrollY <= 65 && props.cartOpen == false && menuOpen === false && width < 750){
-            setNavBlack(false)
+            props.handleNavBlack(false)
         }
     }, [props.cartOpen, menuOpen, width])
 
 
     const handleSetNavBlack = () =>{
         if (window.scrollY <= 65 && !window.location.href.includes("Checkout") && menuOpen === false && props.cartOpen === false){
-            setNavBlack(false)
+            props.handleNavBlack(false)
         } else{
-            setNavBlack(true)
+            props.handleNavBlack(true)
         }
 
     }
@@ -41,12 +41,12 @@ function Header(props) {
         setMenuOpen(!menuOpen)
         if(props.cartOpen == true) {
             props.handleCartOpen()
-            setNavBlack(true)
+            props.handleNavBlack(true)
         }
         if (window.scrollY <= 65 && menuOpen === true){
-            setNavBlack(false)
+            props.handleNavBlack(false)
         } else if (window.scrollY <= 65 && menuOpen === false){
-            setNavBlack(true)
+            props.handleNavBlack(true)
         } 
     }
 
@@ -58,7 +58,7 @@ function Header(props) {
         if(props.cartOpen == true) {
             props.handleCartOpen()
         }else if (window.scrollY <= 65){
-            setNavBlack(false)
+            props.handleNavBlack(false)
         }
     }
 
@@ -76,9 +76,9 @@ function Header(props) {
 
     const handleCartOpen2 = () => {
         if (props.cartOpen == false && window.scrollY < 65){
-            setNavBlack(true)
+            props.handleNavBlack(true)
         } else if (props.cartOpen == true && window.scrollY < 65){
-            setNavBlack(false)
+            props.handleNavBlack(false)
         }
         props.handleCartOpen()
         setMenuOpen(false)
@@ -101,7 +101,7 @@ function Header(props) {
 
     return (
         <div>
-            <div className={navBlack ? "navbar active" : "navbar"}>
+            <div className={props.navBlack ? "navbar active" : "navbar"}>
                 <div className="hamburger">
                     <img id="hamburger_icon" src={menuOpen ? x_mark : hamburger} alt="" onClick={handleMenuOpen}/>
                 </div>

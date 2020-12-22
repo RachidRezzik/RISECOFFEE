@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/RISECOFFEE/static/css/main.e23e8b87.chunk.css",
-    "main.js": "/RISECOFFEE/static/js/main.a4f3ccf0.chunk.js",
-    "main.js.map": "/RISECOFFEE/static/js/main.a4f3ccf0.chunk.js.map",
+    "main.css": "/RISECOFFEE/static/css/main.1714ff4b.chunk.css",
+    "main.js": "/RISECOFFEE/static/js/main.d551b76a.chunk.js",
+    "main.js.map": "/RISECOFFEE/static/js/main.d551b76a.chunk.js.map",
     "runtime-main.js": "/RISECOFFEE/static/js/runtime-main.90b2f6f0.js",
     "runtime-main.js.map": "/RISECOFFEE/static/js/runtime-main.90b2f6f0.js.map",
     "static/js/2.053afcd2.chunk.js": "/RISECOFFEE/static/js/2.053afcd2.chunk.js",
@@ -10,18 +10,18 @@
     "static/js/3.53e7c1e4.chunk.js": "/RISECOFFEE/static/js/3.53e7c1e4.chunk.js",
     "static/js/3.53e7c1e4.chunk.js.map": "/RISECOFFEE/static/js/3.53e7c1e4.chunk.js.map",
     "index.html": "/RISECOFFEE/index.html",
-    "static/css/main.e23e8b87.chunk.css.map": "/RISECOFFEE/static/css/main.e23e8b87.chunk.css.map",
+    "static/css/main.1714ff4b.chunk.css.map": "/RISECOFFEE/static/css/main.1714ff4b.chunk.css.map",
     "static/js/2.053afcd2.chunk.js.LICENSE.txt": "/RISECOFFEE/static/js/2.053afcd2.chunk.js.LICENSE.txt",
-    "static/media/Rise_Brother1.c1ef5691.jpg": "/RISECOFFEE/static/media/Rise_Brother1.c1ef5691.jpg",
-    "static/media/Rise_Brother2.5185f939.jpg": "/RISECOFFEE/static/media/Rise_Brother2.5185f939.jpg",
-    "static/media/App.css": "/RISECOFFEE/static/media/shop_background.78643be8.jpg",
-    "static/media/austin.a0600989.jpg": "/RISECOFFEE/static/media/austin.a0600989.jpg",
+    "static/media/Rise_Brother1.b2dfed24.jpg": "/RISECOFFEE/static/media/Rise_Brother1.b2dfed24.jpg",
+    "static/media/Rise_Brother2.d6f4ca3d.jpg": "/RISECOFFEE/static/media/Rise_Brother2.d6f4ca3d.jpg",
+    "static/media/App.css": "/RISECOFFEE/static/media/shop_background.ad5b7d0c.jpg",
+    "static/media/austin.0be4fdd2.jpg": "/RISECOFFEE/static/media/austin.0be4fdd2.jpg",
     "static/media/coffee_bag.02369bcb.png": "/RISECOFFEE/static/media/coffee_bag.02369bcb.png",
-    "static/media/coffee_week.cd85eb64.jpg": "/RISECOFFEE/static/media/coffee_week.cd85eb64.jpg",
-    "static/media/dallas.97dc2d48.jpg": "/RISECOFFEE/static/media/dallas.97dc2d48.jpg",
-    "static/media/fire.1f38e457.jpg": "/RISECOFFEE/static/media/fire.1f38e457.jpg",
-    "static/media/free_coffee.d62aa96a.jpg": "/RISECOFFEE/static/media/free_coffee.d62aa96a.jpg",
-    "static/media/houston.329a9cbc.jpg": "/RISECOFFEE/static/media/houston.329a9cbc.jpg",
+    "static/media/coffee_week.b1ce1684.jpg": "/RISECOFFEE/static/media/coffee_week.b1ce1684.jpg",
+    "static/media/dallas.4330c479.jpg": "/RISECOFFEE/static/media/dallas.4330c479.jpg",
+    "static/media/fire.40828991.jpg": "/RISECOFFEE/static/media/fire.40828991.jpg",
+    "static/media/free_coffee.5e4fbf5c.jpg": "/RISECOFFEE/static/media/free_coffee.5e4fbf5c.jpg",
+    "static/media/houston.9a62bfdc.jpg": "/RISECOFFEE/static/media/houston.9a62bfdc.jpg",
     "static/media/minus_sign.62d1785a.png": "/RISECOFFEE/static/media/minus_sign.62d1785a.png",
     "static/media/plus_sign.af036e11.png": "/RISECOFFEE/static/media/plus_sign.af036e11.png",
     "static/media/shopping_bag.dcac860f.png": "/RISECOFFEE/static/media/shopping_bag.dcac860f.png",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.90b2f6f0.js",
     "static/js/2.053afcd2.chunk.js",
-    "static/css/main.e23e8b87.chunk.css",
-    "static/js/main.a4f3ccf0.chunk.js"
+    "static/css/main.1714ff4b.chunk.css",
+    "static/js/main.d551b76a.chunk.js"
   ]
 }

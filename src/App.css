@@ -276,7 +276,7 @@
 
 .home_welcome{
     padding-top: 65px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(0, 0, 0, 0.596)), url(./images/home_background.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)), url(./images/home_background.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -313,15 +313,17 @@
 .home_welcome img{
   position: absolute;
   bottom: 15%;
-  width: 60px;
-  height: 30px;
+  width: 80px;
+  height: 25px;
   transition: all .25s ease;
   cursor: pointer;
   z-index: 7;
 }
 
-.home_welcome img:hover{
-  transform: scale(1.25);
+@media (hover: hover) and (pointer: fine) {
+  .home_welcome img:hover{
+    transform: scale(1.25);
+  }
 }
 
 .our_process{

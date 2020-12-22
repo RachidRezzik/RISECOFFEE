@@ -20,6 +20,7 @@ function App() {
   const setOrderStorage = (cartOrders) => {
     localStorage.setItem('cartOrders', JSON.stringify(cartOrders))
   }
+  
   const readOrderStorage = () => {
     return JSON.parse(localStorage.getItem('cartOrders'))
   }
